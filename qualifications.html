@@ -1,48 +1,66 @@
+<nav style="background-color: #5b0230; padding: 10px; text-align: center;">
+  <a href="index.html" style="color: white; margin: 0 15px">Home</a>
+  <a href="portfolio.html" style="color: white; margin: 0 15px;">Portfolio</a>
+  <a href="qualifications.html" style="color: white; margin: 0 15px;">Qualifications</a>
+  <a href="service.html" style="color: white; margin: 0 15px;">Service</a>
+  <a href="genai.html" style="color: white; margin: 0 15px;">AI Page</a>
+</nav>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Qualifications</title>
-  <style>
-    body {
-      background-color: maroon;
-      color: white;
-      margin: 0;
-    }
-    hr {
-      border: 1px solid white;
-    }
-    header {
-      text-align: center;
-      padding: 10px;
-      font-size: 24px;
-      font-weight: bold;
-      border-bottom: 2px solid white;
-    }
-  </style>
+  <link id ="pagestyle" rel="stylesheet" href="style1.css">
 </head>
-<body>
+ <main style="max-width: 800px; margin: auto; padding: 0 16px;">
+    <h3>Resume</h3>
+    <!-- Embedded Google Drive PDF (as required) -->
+    <iframe 
+      src="https://drive.google.com/file/d/1VPOvKvPXRrp5DfxS1WYdc_OtR30tXSFW/preview" 
+      width="100%" height="640" style="border: 1px solid #ccc; border-radius: 6px;"
+      allow="autoplay">
+    </iframe>
+    <p>
+      <a href="https://drive.google.com/file/d/1VPOvKvPXRrp5DfxS1WYdc_OtR30tXSFW/view?usp=sharing" target="_blank">
+        Open resume in Google Drive
+      </a>
+    </p>
+    <hr>
 
-  <header>QUALIFICATIONS</header>
-  
+    <h3>Technical Skills</h3>
+    <p>
+      I am proficient in Java, Python, and C++. I have applied frameworks such as TensorFlow, PyQt5, Flask and OpenCV in the past. Further, in professional contexts, I have worked with DevOps and Jenkins making sure that workflows in a reliable manner relating to software integration. 
+    </p>
+    <!-- <ul>
+      <li><b>Languages:</b> Java, Python, C++</li>
+      <li><b>Core CS:</b> Data Structures & Algorithms, OOP, Debugging & Testing</li>
+      <li><b>Tools:</b> Git/GitHub, Linux shell, VS Code, Azure DevOps/Jenkins basics</li>
+      <li><b>ML/CV (intro):</b> TensorFlow/Keras, OpenCV, scikit-learn</li>
+      <li><b>Web (intro):</b> HTML, CSS, JavaScript, Flask basics</li>
+    </ul> -->
+    <hr>
 
-  <h3>Resume</h3>
-  <p>placeholder</p>
-  <hr>
+    <h3>Technical Areas of Interest (Why)</h3>
+    <p>
+      Other than tools, I have taken plenty of meaningful coursework at Texas A&M.  Courses like data structures and algorithms, software design and principles, and machine learning have given me strong problem-solving skills. I have also joined clubs like the Aggie Coding Club and the Data Science Club here, which provides spaces for me to expand my learning and also to collaborate with my peers on difficult challenges. 
+    </p>
+    <!-- <ul>
+      <li><b>AI/ML:</b> I enjoy turning data into models.</li>
+      <li><b>Software Engineering:</b> I like buildingfeatures that scale and are used by others.</li>
+      <li><b>Robotics & Computer Vision:</b> They are really cool and apply to modern world.</li>
+      <li><b>Systems & Performance:</b> I find optimizing to be a rewarding process.</li>
+    </ul> -->
+  </main>
 
-  <h3>Technical Skills</h3>
-  <ul>
-    <li>Placeholder Skill 1</li>
-    <li>Placeholder Skill 2</li>
-    <li>Placeholder Skill 3</li>
-  </ul>
-  <hr>
+  <div style="text-align:center; margin: 20px;">
+    <button onclick="swapStyle()">Toggle Style</button>
+  </div>
 
-  <h3>Technical Areas of Interest</h3>
-  <ul>
-    <li>Placeholder Area 1</li>
-    <li>Placeholder Area 2</li>
-    <li>Placeholder Area 3</li>
-  </ul>
-
+  <script>
+    function swapStyle() {
+      const link = document.getElementById("pagestyle");
+      link.setAttribute("href", link.getAttribute("href") === "style1.css" ? "style2.css" : "style1.css");
+    }
+  </script>
 </body>
 </html>

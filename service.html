@@ -1,28 +1,43 @@
+<nav style="background-color: #5b0230; padding: 10px; text-align: center;">
+  <a href="index.html" style="color: white; margin: 0 15px">Home</a>
+  <a href="portfolio.html" style="color: white; margin: 0 15px;">Portfolio</a>
+  <a href="qualifications.html" style="color: white; margin: 0 15px;">Qualifications</a>
+  <a href="service.html" style="color: white; margin: 0 15px;">Service</a>
+  <a href="genai.html" style="color: white; margin: 0 15px;">AI Page</a>
+</nav>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Service</title>
-  <style>
-    body {
-      background-color: maroon;
-      color: white;
-    }
-    hr {
-      border: 1px solid white;
-    }
-  </style>
+    <link id="pagestyle" rel="stylesheet" href="style1.css">
 </head>
 <body>
 
-  <h1>SERVICE</h1>
-  <hr>
+  <main style="max-width: 800px; margin: auto; padding: 0 16px;">
+    <h1>Service</h1>
+    <hr>
 
-  <h3>Service Image</h3>
-  <p>placeholder</p>
-  <hr>
+    <h3>Giving Back</h3>
+    <p>
+      I am a strong believer that technology is the most valuable tool when it can empower others. Through my role as a Camp Instructor for the Engineering for Kids summer camps, I got to express this belief. I had the opportunity to teach over 30 children on how to program drones using block code. Being able to see firsthand how my instruction was able to spark curiosity in the youth was truly a beautiful experience. 
+    </p>
+    <p>
+      You can learn more about organizations I support here: 
+      <a href="https://www.engineeringforkids.com/" target="_blank">Engineering for Kids</a>, 
+    </p>
+  </main>
 
-  <h3>Service Description</h3>
-  <p>placeholder</p>
+  <!-- Style toggle -->
+  <div style="text-align:center; margin: 20px;">
+    <button onclick="swapStyle()">Toggle Style</button>
+  </div>
 
+  <script>
+    function swapStyle() {
+      const link = document.getElementById("pagestyle");
+      link.setAttribute("href", link.getAttribute("href") === "style1.css" ? "style2.css" : "style1.css");
+    }
+  </script>
 </body>
 </html>

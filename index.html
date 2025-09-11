@@ -1,3 +1,11 @@
+<nav style="background-color: #5b0230; padding: 10px; text-align: center;">
+  <a href="index.html" style="color: white; margin: 0 15px">Home</a>
+  <a href="portfolio.html" style="color: white; margin: 0 15px;">Portfolio</a>
+  <a href="qualifications.html" style="color: white; margin: 0 15px;">Qualifications</a>
+  <a href="service.html" style="color: white; margin: 0 15px;">Service</a>
+  <a href="genai.html" style="color: white; margin: 0 15px;">AI Page</a>
+</nav>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +32,9 @@
     <fieldset>
       <legend>About Me</legend>
       <p>Howdy! I&apos;m Arnav Sharma</p>
+      <hr>
+      <p>My name is Arnav Sharma, a junior Computer Science student at Texas A&M University. I am doing a minor in statistics and I am passionate about designing intelligent systems. My journey in software engineering and artificial intelligence is characterized by previous internships, projects, and community service. I currently have a cumulative GPA of 3.8 and I have embraced a lot of technical rigor through my coursework and through the opportunities outside the classroom. I am continuing to find ways to apply the skills I have in meaningful ways. Both my academic and work experiences have created an awesome journey that reflects a balance between curiosity and discipline. From the beginning of my computer science studies in high school, I have been fascinated by the problem-solving aspect of computer science. Being able to break down a complex problem into smaller, more manageable pieces is what drives me to pursue a career in computer science. Furthermore, applying these skills into a practical setting also interested me. This inspired me to pursue projects that combine abstract computing ideas with real-world challenges, such as designing performance testing automation for enterprise software, building robotic control interfaces, and developing machine learning tools for agriculture. My favorite course I have taken in my undergraduate academic career has been data structures and algorithms. This class gave me a deeper understanding of how exactly data can be managed and manipulated. It helped me with endeavours outside of the classroom, such as leetcode and interview prep. Beyond my technical skills, I enjoy community service and serving others. I began volunteering in high school by teaching young students the basics of programming through coding drones. I have also done many food drives. Overall, this professional profile brings together many of my personal experiences, qualities, qualifications, and commitments to my lovely community. 
+    </p>
       <p>Contact: arnavs@tamu.edu</p>
     </fieldset>
 
@@ -56,7 +67,7 @@
 
     <fieldset>
       <legend>AI</legend>
-      <a href="AI.html">AI</a>
+      <a href="genai.html">AI</a>
     </fieldset>
 
     <fieldset>
@@ -71,6 +82,18 @@
 
   </div>
 </body>
+
+<div style="text-align:center; margin:20px;">
+  <button onclick="swapStyle()">Toggle Style</button>
+</div>
+<script>
+  function swapStyle(){
+    const link = document.getElementById('pagestyle');
+    link.href = (link.href.includes('style1.css')) ? 'style2.css' : 'style1.css';
+  }
+</script>
+
+
 </html>
 <!-- hi -->
 
