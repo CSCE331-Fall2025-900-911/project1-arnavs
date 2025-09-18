@@ -1,69 +1,98 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Portfolio</title>
   <link id="pagestyle" rel="stylesheet" href="style1.css">
+
 </head>
+
+
+
 <body>
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="qualifications.html">Qualifications</a>
+  <a href="service.html">Service</a>
+  <a href="genai.html">AI Page</a>
+</nav>
 
-  <nav style="background-color: #5b0230; padding: 10px; text-align: center;">
-    <a href="index.html" style="color: white; margin: 0 15px">Home</a>
-    <a href="portfolio.html" style="color: white; margin: 0 15px;">Portfolio</a>
-    <a href="qualifications.html" style="color: white; margin: 0 15px;">Qualifications</a>
-    <a href="service.html" style="color: white; margin: 0 15px;">Service</a>
-    <a href="genai.html" style="color: white; margin: 0 15px;">AI Page</a>
-  </nav>
-
-<main style="max-width: 800px; margin: auto; padding: 20px;">
-  <h1>Technical Portfolio</h1>
+  <main>
+    <h1>Technical Portfolio</h1>
     <p>
-      The most impactful experience I have had is at my internship at Hexagon’s Asset Lifecycle Intelligence Division’s Smart 3Dx team. Within this team, I worked on performance test automation and focused on detecting bottlenecks in large-scale deliverable updates by optimizing test systems that tracked 95% of total update time. This role significantly improved my collaboration skills because I worked within a professional development environment using Azure DevOps, Git, and Jenkins for version control and also the CI/CD pipelines. This experience truly changed my perspective and enlightened me on the importance of efficiency, scalability, and reliability in enterprise-grade software. 
+      The most impactful experience I have had is at my internship at Hexagon’s Asset Lifecycle
+      Intelligence Division’s Smart 3Dx team. Within this team, I worked on performance test
+      automation and focused on detecting bottlenecks in large-scale deliverable updates by
+      optimizing test systems that tracked 95% of total update time. This role significantly improved
+      my collaboration skills because I worked within a professional development environment using
+      Azure DevOps, Git, and Jenkins for version control and also the CI/CD pipelines. This experience
+      truly changed my perspective and enlightened me on the importance of efficiency, scalability,
+      and reliability in enterprise-grade software.
     </p>
+
     <hr>
+
     <p>
-      The burning passion I have for robotics and real-time systems was sparked by my ongoing role as a Full-Stack Developer for the Texas A&M University Rover Challenge Team. I continue to lead both the front-end and also the back-end development of the graphical user interface. I also develop tools that help visualize live rover data streams such as the sensors and video feeds. This project was quite technically challenging as it required a multidisciplinary approach. I applied Python, PyQt5, OpenCV, and ROS to create user-friendly and reliable tools. I learned how to be resilient and how to work with a team by competing in this international competition.
+      The burning passion I have for robotics and real-time systems was sparked by my ongoing role
+      as a Full-Stack Developer for the Texas A&M University Rover Challenge Team. I continue to lead
+      both the front-end and also the back-end development of the graphical user interface. I also
+      develop tools that help visualize live rover data streams such as the sensors and video feeds.
+      This project was quite technically challenging as it required a multidisciplinary approach. I
+      applied Python, PyQt5, OpenCV, and ROS to create user-friendly and reliable tools. I learned
+      how to be resilient and how to work with a team by competing in this international competition.
     </p>
 
     <h2>Selected Projects</h2>
     <ul>
       <li>
-        <b>Performance Testing Automation (Hexagon)</b> – 
-        Built automated test cases to detect bottlenecks in Smart 3Dx deliverables. 
-        Collaborated via <a href="https://azure.microsoft.com" target="_blank">Azure DevOps</a>, Git, and Jenkins. 
+        <b>Performance Testing Automation (Hexagon)</b> – Built automated test cases to detect
+        bottlenecks in Smart 3Dx deliverables. Collaborated via
+        <a href="https://azure.microsoft.com" target="_blank">Azure DevOps</a>, Git, and Jenkins.
       </li>
       <li>
-        <b>University Rover Challenge GUI</b> – 
-        Developed a full-stack interface for robotics data visualization using 
-        <a href="https://www.python.org" target="_blank">Python</a>, 
-        <a href="https://riverbankcomputing.com/software/pyqt/intro" target="_blank">PyQt5</a>, 
-        and <a href="https://opencv.org" target="_blank">OpenCV</a>. 
+        <b>University Rover Challenge GUI</b> – Developed a full-stack interface for robotics data
+        visualization using <a href="https://www.python.org" target="_blank">Python</a>,
+        <a href="https://riverbankcomputing.com/software/pyqt/intro" target="_blank">PyQt5</a>, and
+        <a href="https://opencv.org" target="_blank">OpenCV</a>.
       </li>
       <li>
-        <b>AgriTech Datathon Tool</b> – 
-        Designed a web app to detect cotton fields from satellite imagery using 
-        <a href="https://earthengine.google.com" target="_blank">Google Earth Engine</a> API 
-        and Random Forest models. 
+        <b>AgriTech Datathon Tool</b> – Designed a web app to detect cotton fields from satellite
+        imagery using <a href="https://earthengine.google.com" target="_blank">Google Earth Engine</a>
+        API and Random Forest models.
       </li>
       <li>
-        <b>Digit Recognition Neural Network</b> – 
-        Trained a TensorFlow model on the MNIST dataset, achieving 96% accuracy in 
-        classifying handwritten digits. More details on my 
-        <a href="https://github.com/1-nav" target="_blank">GitHub</a>. 
+        <b>Digit Recognition Neural Network</b> – Trained a TensorFlow model on the MNIST dataset,
+        achieving 96% accuracy in classifying handwritten digits. More details on my
+        <a href="https://github.com/1-nav" target="_blank">GitHub</a>.
       </li>
     </ul>
   </main>
 
-  <div style="text-align:center; margin: 20px;">
+  <div class="style-toggle" style="text-align:center; margin:20px;">
     <button onclick="swapStyle()">Toggle Style</button>
   </div>
 
   <script>
-    function swapStyle() {
-      const link = document.getElementById("pagestyle");
-      link.setAttribute("href", link.getAttribute("href") === "style1.css" ? "style2.css" : "style1.css");
-    }
+    (function () {
+      const KEY = 'which-style';  
+      const link = document.getElementById('pagestyle');
+
+      
+      const saved = localStorage.getItem(KEY);
+      if (saved === '2') link.href = 'style2.css';
+
+      
+      window.swapStyle = function () {
+        if (link.href.includes('style1.css')) {
+          link.href = 'style2.css';
+          localStorage.setItem(KEY, '2');
+        } else {
+          link.href = 'style1.css';
+          localStorage.setItem(KEY, '1');
+        }
+      };
+    })();
   </script>
 </body>
 </html>

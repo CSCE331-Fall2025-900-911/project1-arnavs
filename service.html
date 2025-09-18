@@ -1,43 +1,72 @@
-<nav style="background-color: #5b0230; padding: 10px; text-align: center;">
-  <a href="index.html" style="color: white; margin: 0 15px">Home</a>
-  <a href="portfolio.html" style="color: white; margin: 0 15px;">Portfolio</a>
-  <a href="qualifications.html" style="color: white; margin: 0 15px;">Qualifications</a>
-  <a href="service.html" style="color: white; margin: 0 15px;">Service</a>
-  <a href="genai.html" style="color: white; margin: 0 15px;">AI Page</a>
-</nav>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Service</title>
-    <link id="pagestyle" rel="stylesheet" href="style1.css">
+  <meta charset="UTF-8">
+  <title>Service - Arnav Sharma</title>
+  <link id="pagestyle" rel="stylesheet" href="style1.css">
 </head>
-<body>
+<body class="service">
 
-  <main style="max-width: 800px; margin: auto; padding: 0 16px;">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="qualifications.html">Qualifications</a>
+    <a href="service.html">Service</a>
+    <a href="genai.html">AI Page</a>
+  </nav>
+
+
+  <main>
     <h1>Service</h1>
-    <hr>
 
-    <h3>Giving Back</h3>
-    <p>
-      I am a strong believer that technology is the most valuable tool when it can empower others. Through my role as a Camp Instructor for the Engineering for Kids summer camps, I got to express this belief. I had the opportunity to teach over 30 children on how to program drones using block code. Being able to see firsthand how my instruction was able to spark curiosity in the youth was truly a beautiful experience. 
-    </p>
-    <p>
-      You can learn more about organizations I support here: 
-      <a href="https://www.engineeringforkids.com/" target="_blank">Engineering for Kids</a>, 
-    </p>
+  
+    <section class="service-block">
+      <img src="engrForKids.jpg" alt="Engineering for Kids" class="service-pic">
+      <div>
+        <h3>Giving Back</h3>
+        <p>I am a strong believer that technology is the most valuable tool when it can empower others. 
+           This led me to volunteer with 
+           <a href="https://www.engineeringforkids.com" target="_blank">Engineering for Kids</a>, 
+           where I taught programming and robotics 
+           to younger students.</p>
+      </div>
+    </section>
+
+    
+    <section class="service-block">
+      <div>
+        <h3>Community Service</h3>
+        <p>Beyond technical teaching, I also participate in food drives and local community service efforts, 
+           where I contribute time and energy to giving back to those in need.</p>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Style toggle -->
-  <div style="text-align:center; margin: 20px;">
+
+  <div class="style-toggle" style="text-align:center; margin:20px;">
     <button onclick="swapStyle()">Toggle Style</button>
   </div>
 
+
   <script>
-    function swapStyle() {
-      const link = document.getElementById("pagestyle");
-      link.setAttribute("href", link.getAttribute("href") === "style1.css" ? "style2.css" : "style1.css");
-    }
+    (function () {
+      const KEY = 'which-style';
+      const link = document.getElementById('pagestyle');
+      const saved = localStorage.getItem(KEY);
+      if (saved === '2') link.href = 'style2.css';
+
+      window.swapStyle = function () {
+        if (link.href.includes('style1.css')) {
+          link.href = 'style2.css';
+          localStorage.setItem(KEY, '2');
+        } else {
+          link.href = 'style1.css';
+          localStorage.setItem(KEY, '1');
+        }
+      };
+    })();
   </script>
+
 </body>
 </html>
